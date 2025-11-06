@@ -1,0 +1,14 @@
+:root {
+  --frame-background-light: var(--green-10);
+  --frame-background-dark: var(--green-900);
+  --frame-background: var(--frame-background-light);
+
+  --frame-border-light: var(--green-400);
+  --frame-border-dark: var(--green-400);
+  --frame-border: var(--frame-border-light);
+}
+
+.dark {
+  --frame-background: var(--frame-background-dark);
+  --frame-border: var(--frame-border-dark);
+}

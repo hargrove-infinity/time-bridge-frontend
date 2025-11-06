@@ -1,0 +1,39 @@
+:root {
+  --switch-background-light: var(--green-50);
+  --switch-background-dark: var(--green-950);
+  --switch-background: var(--switch-background-light);
+
+  --switch-border-light: var(--green-400);
+  --switch-border-dark: var(--green-600);
+  --switch-border: var(--switch-border-light);
+
+  --switch-ring-light: var(--green-100);
+  --switch-ring-dark: var(--green-200);
+  --switch-ring: var(--switch-ring-light);
+
+  --switch-thumb-light: var(--white);
+  --switch-thumb-dark: var(--green-900);
+  --switch-thumb: var(--switch-thumb-light);
+
+  --switch-icon-light: var(--green-400);
+  --switch-icon-dark: var(--green-50);
+  --switch-icon: var(--switch-icon-light);
+
+  --switch-title-light: var(--green-900);
+  --switch-title-dark: var(--white);
+  --switch-title: var(--switch-title-light);
+
+  --switch-label-light: var(--green-700);
+  --switch-label-dark: var(--white);
+  --switch-label: var(--switch-label-light);
+}
+
+.dark {
+  --switch-background: var(--switch-background-dark);
+  --switch-border: var(--switch-border-dark);
+  --switch-ring: var(--switch-ring-dark);
+  --switch-thumb: var(--switch-thumb-dark);
+  --switch-icon: var(--switch-icon-dark);
+  --switch-title: var(--switch-title-dark);
+  --switch-label: var(--switch-label-dark);
+}

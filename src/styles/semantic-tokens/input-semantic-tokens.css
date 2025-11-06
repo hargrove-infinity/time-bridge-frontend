@@ -1,0 +1,44 @@
+:root {
+  /* Input */
+  --input-text-light: var(--green-900);
+  --input-text-dark: var(--white);
+  --input-text: var(--input-text-light);
+
+  --input-text-placeholder-light: var(--green-900);
+  --input-text-placeholder-dark: var(--white);
+  --input-text-placeholder: var(--input-text-placeholder-light);
+
+  --input-background-light: var(--white);
+  --input-background-dark: var(--green-800);
+  --input-background: var(--input-background-light);
+
+  --input-border-light: var(--green-400);
+  --input-border-dark: var(--white);
+  --input-border: var(--input-border-light);
+
+  --input-border-focus-light: var(--green-100);
+  --input-border-focus-dark: var(--green-200);
+  --input-border-focus: var(--input-border-focus-light);
+
+  /* Input Error */
+  --input-error-border-light: var(--red-700);
+  --input-error-border-dark: var(--red-700);
+  --input-error-border: var(--input-error-border-light);
+
+  --input-error-ring-light: var(--red-700);
+  --input-error-ring-dark: var(--red-700);
+  --input-error-ring: var(--input-error-ring-light);
+}
+
+.dark {
+  /* Input */
+  --input-text: var(--input-text-dark);
+  --input-text-placeholder: var(--input-text-placeholder-dark);
+  --input-background: var(--input-background-dark);
+  --input-border: var(--input-border-dark);
+  --input-border-focus: var(--input-border-focus-dark);
+
+  /* Input Error */
+  --input-error-border: var(--input-error-border-dark);
+  --input-error-ring: var(--input-error-ring-dark);
+}

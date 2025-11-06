@@ -1,0 +1,33 @@
+:root {
+  /* Button */
+  --button-background-light: var(--green-400);
+  --button-background-dark: var(--green-400);
+  --button-background: var(--button-background-light);
+
+  --button-background-hover-light: var(--green-500);
+  --button-background-hover-dark: var(--green-600);
+  --button-background-hover: var(--button-background-hover-light);
+
+  --button-text-light: var(--white);
+  --button-text-dark: var(--white);
+  --button-text: var(--button-text-light);
+
+  /* Button eye icon */
+  --button-eye-icon-background-hover-light: var(--green-50);
+  --button-eye-icon-background-hover-dark: var(--green-400);
+  --button-eye-icon-background-hover: var(
+    --button-eye-icon-background-hover-light
+  );
+}
+
+.dark {
+  /* Button */
+  --button-background: var(--button-background-dark);
+  --button-background-hover: var(--button-background-hover-dark);
+  --button-text: var(--button-text-dark);
+
+  /* Button eye icon */
+  --button-eye-icon-background-hover: var(
+    --button-eye-icon-background-hover-dark
+  );
+}

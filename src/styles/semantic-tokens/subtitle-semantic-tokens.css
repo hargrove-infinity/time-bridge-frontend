@@ -1,0 +1,9 @@
+:root {
+  --subtitle-color-light: var(--green-700);
+  --subtitle-color-dark: var(--white);
+  --subtitle-color: var(--subtitle-color-light);
+}
+
+.dark {
+  --subtitle-color: var(--subtitle-color-dark);
+}
