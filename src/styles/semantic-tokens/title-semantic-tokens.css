@@ -1,0 +1,9 @@
+:root {
+  --title-color-light: var(--green-900);
+  --title-color-dark: var(--white);
+  --title-color: var(--title-color-light);
+}
+
+.dark {
+  --title-color: var(--title-color-dark);
+}

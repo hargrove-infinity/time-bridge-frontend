@@ -1,0 +1,9 @@
+:root {
+  --app-background-light: var(--white);
+  --app-background-dark: var(--green-950);
+  --app-background: var(--app-background-light);
+}
+
+.dark {
+  --app-background: var(--app-background-dark);
+}

@@ -1,0 +1,24 @@
+@import "./fonts.css";
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Colors */
+@import "./colors/palette.css";
+@import "./colors/theme-colors.css";
+
+/* Semantic tokens */
+@import "./semantic-tokens/body-semantic-tokens.css";
+@import "./semantic-tokens/button-semantic-tokens.css";
+@import "./semantic-tokens/field-semantic-tokens.css";
+@import "./semantic-tokens/frame-semantic-tokens.css";
+@import "./semantic-tokens/icon-semantic-tokens.css";
+@import "./semantic-tokens/input-semantic-tokens.css";
+@import "./semantic-tokens/link-semantic-tokens.css";
+@import "./semantic-tokens/subtitle-semantic-tokens.css";
+@import "./semantic-tokens/switch-semantic-tokens.css";
+@import "./semantic-tokens/title-semantic-tokens.css";
+
+@import "./variants.css";
+
+@import "./base.css";

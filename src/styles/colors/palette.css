@@ -1,0 +1,25 @@
+/* Raw color palette */
+:root {
+  /* Base */
+  --white: #ffffff;
+
+  /* Green palette */
+  --green-950: #041000; /* --green-950 */
+  --green-900: #082100; /* --green-900 */
+  --green-800: #0e3900; /* --green-800 */
+  --green-700: #41682c; /* --green-700 */
+  --green-600: #3f6834; /* --green-600 */
+  --green-500: #426c37; /* --green-500 */
+  --green-400: #508243; /* --green-400 */
+  --green-300: #7ebb32; /* --green-300 */
+  --green-200: #00ff00; /* --green-200 */
+  --green-100: #51d300; /* --green-100 */
+  --green-50: #caeaa2; /* --green-50 */
+  --green-10: #fcfffa; /* --green-10 */
+
+  /* Red palette */
+  --red-900: #9c0007;
+  --red-800: #b10008;
+  --red-700: #d8000a;
+  --red-600: #ed2a33;
+}

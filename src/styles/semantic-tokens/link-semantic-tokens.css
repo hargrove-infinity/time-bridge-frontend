@@ -1,0 +1,9 @@
+:root {
+  --link-color-light: var(--green-900);
+  --link-color-dark: var(--white);
+  --link-color: var(--link-color-light);
+}
+
+.dark {
+  --link-color: var(--link-color-dark);
+}

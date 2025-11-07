@@ -1,0 +1,9 @@
+:root {
+  --eye-icon-text-light: var(--green-900);
+  --eye-icon-text-dark: var(--white);
+  --eye-icon-text: var(--eye-icon-text-light);
+}
+
+.dark {
+  --eye-icon-text: var(--eye-icon-text-dark);
+}
