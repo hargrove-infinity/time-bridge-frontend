@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { createAuthSlice, type AuthSlice } from "./auth";
+import { createAuthSlice, type AuthSlice } from "./authSlice";
 
 type StoreState = AuthSlice;
 
