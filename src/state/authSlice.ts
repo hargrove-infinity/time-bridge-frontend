@@ -1,13 +1,17 @@
 import type { StateCreator } from "zustand";
-import { api, AUTH_ENDPOINTS } from "@/api";
+import {
+  type AuthCredentials,
+  loginRequest,
+  registerRequest,
+  isApiError,
+  isAxiosError,
+  UNKNOWN_AXIOS_ERROR,
+  UNKNOWN_ERROR,
+} from "@/api";
 import { setToken } from "@/lib/token";
 
-interface AuthCredentials {
-  email: string;
-  password: string;
-}
-
 export interface AuthSlice {
+  error: string[] | null;
   loadingRegister: boolean;
   loadingLogin: boolean;
   register: (args: AuthCredentials) => Promise<void>;
@@ -15,20 +19,53 @@ export interface AuthSlice {
 }
 
 export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
+  error: null,
   loadingRegister: false,
   loadingLogin: false,
   register: async (body: AuthCredentials) => {
-    set({ loadingRegister: true });
-    const res = await api.post(AUTH_ENDPOINTS.REGISTER, body);
-    const { payload } = res.data;
-    setToken(payload);
-    set({ loadingRegister: false });
+    try {
+      set({ loadingRegister: true });
+      const res = await registerRequest(body);
+      const { payload } = res.data;
+      setToken(payload);
+      set({ loadingRegister: false });
+    } catch (error) {
+      set({ loadingRegister: false });
+
+      if (isAxiosError(error)) {
+        if (isApiError(error)) {
+          set({ error: error.response.data.errors });
+          return;
+        }
+
+        set({ error: UNKNOWN_AXIOS_ERROR });
+        return;
+      }
+
+      set({ error: UNKNOWN_ERROR });
+    }
   },
   login: async (body: AuthCredentials) => {
-    set({ loadingLogin: true });
-    const res = await api.post(AUTH_ENDPOINTS.LOGIN, body);
-    const { payload } = res.data;
-    setToken(payload);
-    set({ loadingLogin: false });
+    try {
+      set({ loadingLogin: true });
+      const res = await loginRequest(body);
+      const { payload } = res.data;
+      setToken(payload);
+      set({ loadingLogin: false });
+    } catch (error) {
+      set({ loadingLogin: false });
+
+      if (isAxiosError(error)) {
+        if (isApiError(error)) {
+          set({ error: error.response.data.errors });
+          return;
+        }
+
+        set({ error: UNKNOWN_AXIOS_ERROR });
+        return;
+      }
+
+      set({ error: UNKNOWN_ERROR });
+    }
   },
 });
