@@ -5,19 +5,16 @@ import { authSchema } from "@/validation";
 import { useStore } from "@/state";
 
 export const useLogin = () => {
-  const { login } = useStore();
+  const { loadingLogin, login } = useStore();
 
   const form = useForm<z.infer<typeof authSchema>>({
     resolver: zodResolver(authSchema),
-    defaultValues: {
-      email: "",
-      password: "",
-    },
+    defaultValues: { email: "", password: "" },
   });
 
   const handleSubmit = (data: z.infer<typeof authSchema>) => {
     login(data);
   };
 
-  return { form, handleSubmit };
+  return { form, loadingLogin, handleSubmit };
 };

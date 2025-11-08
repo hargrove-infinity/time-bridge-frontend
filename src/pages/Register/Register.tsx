@@ -66,7 +66,7 @@ export const Register = () => {
             )}
           />
         </FieldGroup>
-        <Button type="submit" className="mt-8">
+        <Button type="submit" className="mt-8" isLoading={hook.loadingRegister}>
           Register
         </Button>
       </form>
