@@ -2,8 +2,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import z from "zod";
 import { authSchema } from "@/validation";
+import { useStore } from "@/state";
 
 export const useRegister = () => {
+  const { register } = useStore();
+
   const form = useForm<z.infer<typeof authSchema>>({
     resolver: zodResolver(authSchema),
     defaultValues: {
@@ -12,8 +15,8 @@ export const useRegister = () => {
     },
   });
 
-  const handleSubmit = (data: z.infer<typeof authSchema>) => {
-    console.log("Register form data: ", data);
+  const handleSubmit = (data: z.infer<typeof authSchema>): void => {
+    register(data);
   };
 
   return { form, handleSubmit };
