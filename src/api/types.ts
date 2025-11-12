@@ -7,8 +7,14 @@ interface ApiResponsePayload<T> {
 
 export type ApiPromise<T> = AxiosPromise<ApiResponsePayload<T>>;
 
+export interface ApiErrorItem {
+  code: string;
+  data: string[];
+  description: string;
+}
+
 export interface ApiErrorPayload {
-  errors: string[];
+  errors: ApiErrorItem[];
 }
 
 export type ApiError = AxiosError<ApiErrorPayload> & {

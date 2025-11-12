@@ -1,0 +1,17 @@
+{
+  "heading": {
+    "title": "Log in to your account",
+    "subTitle": "Continue your journey with us"
+  },
+  "form": {
+    "emailLabel": "Email",
+    "passwordLabel": "Password"
+  },
+  "buttons": {
+    "logInBtn": "Log in"
+  },
+  "additional": {
+    "doNotHaveAccount": "Don't have an account?",
+    "registerLink": "Register"
+  }
+}

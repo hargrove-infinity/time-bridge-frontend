@@ -1,5 +1,6 @@
 import type { StateCreator } from "zustand";
 import {
+  type ApiErrorItem,
   type AuthCredentials,
   loginRequest,
   registerRequest,
@@ -10,7 +11,7 @@ import {
 } from "@/api";
 
 export interface AuthSlice {
-  error: string[] | null;
+  error: ApiErrorItem[] | null;
   loadingRegister: boolean;
   loadingLogin: boolean;
   register: (args: AuthCredentials) => Promise<void>;
