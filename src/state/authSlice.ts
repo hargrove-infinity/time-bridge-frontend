@@ -9,11 +9,13 @@ import {
   UNKNOWN_AXIOS_ERROR,
   UNKNOWN_ERROR,
 } from "@/api";
+import { getToken, setToken } from "@/lib/token";
 
 export interface AuthSlice {
   error: ApiErrorItem[] | null;
   loadingRegister: boolean;
   loadingLogin: boolean;
+  isAuthenticated: boolean;
   register: (args: AuthCredentials) => Promise<void>;
   login: (args: AuthCredentials) => Promise<void>;
 }
@@ -22,11 +24,14 @@ export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
   error: null,
   loadingRegister: false,
   loadingLogin: false,
+  isAuthenticated: !!getToken(),
   register: async (body: AuthCredentials) => {
     try {
       set({ loadingRegister: true });
-      await registerRequest(body);
-      set({ loadingRegister: false });
+      const res = await registerRequest(body);
+      const { payload } = res.data;
+      setToken(payload);
+      set({ loadingRegister: false, isAuthenticated: true });
     } catch (error) {
       set({ loadingRegister: false });
 
@@ -46,8 +51,10 @@ export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
   login: async (body: AuthCredentials) => {
     try {
       set({ loadingLogin: true });
-      await loginRequest(body);
-      set({ loadingLogin: false });
+      const res = await loginRequest(body);
+      const { payload } = res.data;
+      setToken(payload);
+      set({ loadingLogin: false, isAuthenticated: true });
     } catch (error) {
       set({ loadingLogin: false });
 
