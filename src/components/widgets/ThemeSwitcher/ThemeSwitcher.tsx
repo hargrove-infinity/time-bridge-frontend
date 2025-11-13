@@ -8,14 +8,14 @@ export const ThemeSwitcher = () => {
 
   return (
     <div className="flex items-center p-3 relative">
-      <Switch checked={hook.isDark} onCheckedChange={hook.toggleTheme} />
+      <Switch checked={hook.isDarkTheme} onCheckedChange={hook.switchTheme} />
       <div
         className={cn(
           "absolute left-5 transition-transform duration-250 ease-in-out pointer-events-none",
-          hook.isDark && "translate-x-[26px]"
+          hook.isDarkTheme && "translate-x-[26px]"
         )}
       >
-        {hook.isDark ? (
+        {hook.isDarkTheme ? (
           <Moon size={18} className="text-switch-icon" />
         ) : (
           <Sun size={18} className="text-switch-icon" />

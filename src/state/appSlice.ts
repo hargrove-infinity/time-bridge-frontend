@@ -4,6 +4,8 @@ import { getLanguage, getTheme, setLanguage, setTheme } from "@/lib";
 export interface AppSlice {
   language: string;
   theme: string;
+  toggleLanguage: (language: string) => void;
+  toggleTheme: (theme: string) => void;
 }
 
 export const createAppSlice: StateCreator<AppSlice> = (set) => ({
