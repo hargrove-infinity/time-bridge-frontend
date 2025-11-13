@@ -11,6 +11,9 @@ export function isApiError(error: AxiosError): error is ApiError {
     typeof error.response.data === "object" &&
     "errors" in error.response.data &&
     Array.isArray(error.response.data.errors) &&
-    error.response.data.errors.every((itm) => typeof itm === "string")
+    error.response.data.errors.every(
+      (itm) =>
+        typeof itm === "object" && itm.code && itm.description && itm.data
+    )
   );
 }

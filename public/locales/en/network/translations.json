@@ -1,0 +1,7 @@
+{
+  "EMAIL_UNDEFINED": "Email field has not been sent",
+  "EMAIL_EMPTY": "Email field is empty",
+  "EMAIL_INVALID": "Email {{0}} has wrong format",
+  "PASSWORD_UNDEFINED": "Password field has not been sent",
+  "PASSWORD_LENGTH": "Password {{0}} is less than 6 characters."
+}

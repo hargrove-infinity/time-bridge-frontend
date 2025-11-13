@@ -1,0 +1,17 @@
+{
+  "heading": {
+    "title": "Create your account",
+    "subTitle": "Join us today and start your adventure"
+  },
+  "form": {
+    "emailLabel": "Email",
+    "passwordLabel": "Password"
+  },
+  "buttons": {
+    "registerBtn": "Register"
+  },
+  "additional": {
+    "alreadyHaveAccount": "Already have an account?",
+    "logInLink": "Log in"
+  }
+}

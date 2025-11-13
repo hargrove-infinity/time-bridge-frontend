@@ -1,0 +1,17 @@
+{
+  "heading": {
+    "title": "Connectez-vous à votre compte",
+    "subTitle": "Continuez votre voyage avec nous"
+  },
+  "form": {
+    "emailLabel": "E-mail",
+    "passwordLabel": "Mot de passe"
+  },
+  "buttons": {
+    "logInBtn": "Se connecter"
+  },
+  "additional": {
+    "doNotHaveAccount": "Vous n'avez pas de compte ?",
+    "registerLink": "S'inscrire"
+  }
+}
