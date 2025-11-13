@@ -77,6 +77,26 @@
     --button-eye-icon-background-hover
   );
 
+  /* Add these to your existing theme-colors.css */
+
+  /* Select */
+  --color-select-background: var(--select-background);
+  --color-select-text: var(--select-text);
+  --color-select-border: var(--select-border);
+  --color-select-border-focus: var(--select-border-focus);
+  --color-select-ring: var(--select-ring);
+  --color-select-placeholder: var(--select-placeholder);
+  --color-select-icon: var(--select-icon);
+
+  /* Select Content (Dropdown) */
+  --color-select-content-background: var(--select-content-background);
+  --color-select-content-border: var(--select-content-border);
+
+  /* Select Item */
+  --color-select-item-text: var(--select-item-text);
+  --color-select-item-background-hover: var(--select-item-background-hover);
+  --color-select-item-background-focus: var(--select-item-background-focus);
+
   /* Frame */
   --color-frame-background: var(--frame-background);
   --color-frame-border: var(--frame-border);

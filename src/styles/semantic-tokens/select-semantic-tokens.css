@@ -1,0 +1,67 @@
+:root {
+  /* Select */
+  --select-background-light: var(--white);
+  --select-background-dark: var(--green-950);
+  --select-background: var(--select-background-light);
+
+  --select-text-light: var(--green-950);
+  --select-text-dark: var(--white);
+  --select-text: var(--select-text-light);
+
+  --select-border-light: var(--green-300);
+  --select-border-dark: var(--green-700);
+  --select-border: var(--select-border-light);
+
+  --select-border-focus-light: var(--green-400);
+  --select-border-focus-dark: var(--green-500);
+  --select-border-focus: var(--select-border-focus-light);
+
+  --select-placeholder-light: var(--green-700);
+  --select-placeholder-dark: var(--green-50);
+  --select-placeholder: var(--select-placeholder-light);
+
+  --select-icon-light: var(--green-700);
+  --select-icon-dark: var(--green-300);
+  --select-icon: var(--select-icon-light);
+
+  /* Select Content (Dropdown) */
+  --select-content-background-light: var(--white);
+  --select-content-background-dark: var(--green-900);
+  --select-content-background: var(--select-content-background-light);
+
+  --select-content-border-light: var(--green-300);
+  --select-content-border-dark: var(--green-700);
+  --select-content-border: var(--select-content-border-light);
+
+  /* Select Item */
+  --select-item-text-light: var(--green-950);
+  --select-item-text-dark: var(--white);
+  --select-item-text: var(--select-item-text-light);
+
+  --select-item-background-hover-light: var(--green-50);
+  --select-item-background-hover-dark: var(--green-800);
+  --select-item-background-hover: var(--select-item-background-hover-light);
+
+  --select-item-background-focus-light: var(--green-50);
+  --select-item-background-focus-dark: var(--green-700);
+  --select-item-background-focus: var(--select-item-background-focus-light);
+}
+
+.dark {
+  /* Select */
+  --select-background: var(--select-background-dark);
+  --select-text: var(--select-text-dark);
+  --select-border: var(--select-border-dark);
+  --select-border-focus: var(--select-border-focus-dark);
+  --select-placeholder: var(--select-placeholder-dark);
+  --select-icon: var(--select-icon-dark);
+
+  /* Select Content */
+  --select-content-background: var(--select-content-background-dark);
+  --select-content-border: var(--select-content-border-dark);
+
+  /* Select Item */
+  --select-item-text: var(--select-item-text-dark);
+  --select-item-background-hover: var(--select-item-background-hover-dark);
+  --select-item-background-focus: var(--select-item-background-focus-dark);
+}
