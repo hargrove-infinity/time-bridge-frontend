@@ -19,10 +19,10 @@ export const Login = () => {
   return (
     <Frame>
       <h3 className="mb-2 text-title-color font-semibold text-2xl">
-        {hook.locales.title}
+        {hook.locale.title}
       </h3>
       <h4 className="mb-8 text-subtitle-color font-semibold text-base">
-        {hook.locales.subTitle}
+        {hook.locale.subTitle}
       </h4>
       <form onSubmit={hook.form.handleSubmit(hook.handleSubmit)}>
         <FieldGroup className="gap-3">
@@ -32,14 +32,14 @@ export const Login = () => {
             render={({ field, fieldState }) => (
               <Field data-invalid={fieldState.invalid} className="mb-3 gap-1">
                 <FieldLabel htmlFor="email">
-                  {hook.locales.emailLabel}
+                  {hook.locale.emailLabel}
                 </FieldLabel>
                 <Input
                   {...field}
                   id="email"
                   type="email"
                   aria-invalid={fieldState.invalid}
-                  placeholder={hook.locales.emailLabel}
+                  placeholder={hook.locale.emailLabel}
                   autoComplete="off"
                 />
                 {fieldState.invalid && (
@@ -54,13 +54,13 @@ export const Login = () => {
             render={({ field, fieldState }) => (
               <Field data-invalid={fieldState.invalid} className="gap-1">
                 <FieldLabel htmlFor="password">
-                  {hook.locales.passwordLabel}
+                  {hook.locale.passwordLabel}
                 </FieldLabel>
                 <Password
                   {...field}
                   id="password"
                   aria-invalid={fieldState.invalid}
-                  placeholder={hook.locales.passwordLabel}
+                  placeholder={hook.locale.passwordLabel}
                   autoComplete="off"
                 />
                 {fieldState.invalid && (
@@ -71,15 +71,15 @@ export const Login = () => {
           />
         </FieldGroup>
         <Button type="submit" className="mt-8" isLoading={hook.loadingLogin}>
-          {hook.locales.logInBtn}
+          {hook.locale.logInBtn}
         </Button>
       </form>
       <div className="mt-8 flex items-center gap-1">
         <p className="text-subtitle-color font-normal text-sm">
-          {hook.locales.doNotHaveAccount}
+          {hook.locale.doNotHaveAccount}
         </p>
         <Link to={REGISTER} className="text-link-color text-sm">
-          {hook.locales.registerLink}
+          {hook.locale.registerLink}
         </Link>
       </div>
     </Frame>

@@ -22,7 +22,7 @@ export const useLogin = () => {
   return {
     form,
     loadingLogin,
-    locales: {
+    locale: {
       title: t("heading.title"),
       subTitle: t("heading.subTitle"),
       emailLabel: t("form.emailLabel"),

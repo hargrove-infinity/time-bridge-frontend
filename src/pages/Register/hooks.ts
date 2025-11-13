@@ -22,7 +22,7 @@ export const useRegister = () => {
   return {
     form,
     loadingRegister,
-    locales: {
+    locale: {
       title: t("heading.title"),
       subTitle: t("heading.subTitle"),
       emailLabel: t("form.emailLabel"),
