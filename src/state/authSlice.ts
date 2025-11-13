@@ -9,7 +9,7 @@ import {
   UNKNOWN_AXIOS_ERROR,
   UNKNOWN_ERROR,
 } from "@/api";
-import { getToken, setToken } from "@/lib/token";
+import { getToken, setToken } from "@/lib";
 
 export interface AuthSlice {
   error: ApiErrorItem[] | null;

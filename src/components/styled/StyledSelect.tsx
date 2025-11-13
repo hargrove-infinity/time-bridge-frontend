@@ -6,7 +6,7 @@ import {
   SelectLabel as SelectLabelShadCN,
   SelectSeparator as SelectSeparatorShadCN,
 } from "@/components/ui/select";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib";
 
 export const SelectTrigger = ({
   className,

@@ -1,7 +1,7 @@
 import type { ComponentProps } from "react";
 import { Button as ButtonShadCN } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib";
 
 type ButtonProps = ComponentProps<typeof ButtonShadCN> & {
   isLoading?: boolean;

@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
 import { Input as InputShadCN } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib";
 
 export type InputProps = ComponentProps<typeof InputShadCN>;
 
