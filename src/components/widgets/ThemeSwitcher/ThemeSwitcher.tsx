@@ -7,7 +7,7 @@ export const ThemeSwitcher = () => {
   const hook = useThemeSwitcher();
 
   return (
-    <div className="flex items-center p-3 absolute top-0 right-0">
+    <div className="flex items-center p-3 relative">
       <Switch checked={hook.isDark} onCheckedChange={hook.toggleTheme} />
       <div
         className={cn(
