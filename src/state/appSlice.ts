@@ -1,11 +1,11 @@
 import type { StateCreator } from "zustand";
-import type { ApiErrorItem } from "@/api";
 import { CHANGE_LANGUAGE_ERROR } from "@/constants";
 import { getLanguage, getTheme, setLanguage, setTheme } from "@/lib";
+import type { AppErrorItem } from "./types";
 import i18n from "../i18n";
 
 export interface AppSlice {
-  error: ApiErrorItem[] | null;
+  error: AppErrorItem[] | null;
   language: string;
   theme: string;
   toggleLanguage: (language: string) => void;

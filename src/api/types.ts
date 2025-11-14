@@ -1,4 +1,5 @@
 import type { AxiosPromise, AxiosError, AxiosResponse } from "axios";
+import type { AppErrorItem } from "@/state";
 
 // Axios
 interface ApiResponsePayload<T> {
@@ -7,14 +8,8 @@ interface ApiResponsePayload<T> {
 
 export type ApiPromise<T> = AxiosPromise<ApiResponsePayload<T>>;
 
-export interface ApiErrorItem {
-  code: string;
-  data: string[];
-  description: string;
-}
-
 export interface ApiErrorPayload {
-  errors: ApiErrorItem[];
+  errors: AppErrorItem[];
 }
 
 export type ApiError = AxiosError<ApiErrorPayload> & {
