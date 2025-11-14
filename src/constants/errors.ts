@@ -1,0 +1,3 @@
+export const INCORRECT_EMAIL = "auth.INCORRECT_EMAIL";
+export const PASSWORD_LENGTH = "auth.PASSWORD_LENGTH";
+export const PASSWORD_PATTERN = "auth.PASSWORD_PATTERN";
