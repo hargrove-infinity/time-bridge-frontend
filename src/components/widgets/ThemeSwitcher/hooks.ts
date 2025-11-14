@@ -6,7 +6,7 @@ import { getTheme } from "@/lib";
 export const useThemeSwitcher = () => {
   const { theme, toggleTheme } = useStore();
 
-  const switchTheme = (checked: boolean) => {
+  const switchTheme = (checked: boolean): void => {
     const nextTheme = checked ? THEMES.DARK : THEMES.LIGHT;
 
     document.documentElement.classList.toggle(

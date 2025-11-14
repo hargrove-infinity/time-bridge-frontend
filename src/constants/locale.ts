@@ -13,6 +13,14 @@ const LOCALE_NAMESPACES = [
   NETWORK_TRANSLATIONS_NAMESPACE,
 ];
 
+export const CHANGE_LANGUAGE_ERROR = [
+  {
+    code: "Change language error",
+    description: "Error i18n while changing language",
+    data: [],
+  },
+];
+
 export {
   LOCAL_LOGIN_NAMESPACE,
   LOCAL_REGISTER_NAMESPACE,

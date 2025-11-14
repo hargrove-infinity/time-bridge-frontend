@@ -1,3 +1,4 @@
+import { LANGUAGES } from "@/constants";
 import {
   Select,
   SelectContent,
@@ -5,17 +6,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components";
+import { useLanguageSelect } from "./hooks";
 
 export const LanguageSelect = () => {
+  const hook = useLanguageSelect();
+
   return (
-    <Select>
+    <Select value={hook.language} onValueChange={hook.switchLanguage}>
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Select language" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="option1">Option 1</SelectItem>
-        <SelectItem value="option2">Option 2</SelectItem>
-        <SelectItem value="option3">Option 3</SelectItem>
+        <SelectItem value={LANGUAGES.ENGLISH}>English</SelectItem>
+        <SelectItem value={LANGUAGES.FRENCH}>French</SelectItem>
       </SelectContent>
     </Select>
   );
