@@ -1,0 +1,7 @@
+{
+  "auth": {
+    "INCORRECT_EMAIL": "Incorrect email",
+    "PASSWORD_LENGTH": "Password must be at least 8 characters",
+    "PASSWORD_PATTERN": "Password must contain at least one lowercase letter, one uppercase letter, and one number"
+  }
+}
