@@ -1,14 +1,14 @@
 import { LANGUAGES } from "@/constants";
 
 export const setLanguage = (language: string): void => {
-  localStorage.setItem("language", language);
+  localStorage.setItem("i18nextLng", language);
 };
 
 export const getLanguage = (): string => {
-  const language = localStorage.getItem("language");
+  const language = localStorage.getItem("i18nextLng");
   return language || LANGUAGES.ENGLISH;
 };
 
 export const deleteLanguage = (): void => {
-  localStorage.removeItem("language");
+  localStorage.removeItem("i18nextLng");
 };
