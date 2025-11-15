@@ -1,26 +1,33 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { THEMES } from "@/constants";
+import { useStore } from "@/state";
+import { getTheme } from "@/lib";
 
 export const useThemeSwitcher = () => {
-  const [isDark, setIsDark] = useState(false);
+  const { theme, toggleTheme } = useStore();
 
-  const toggleTheme = (checked: boolean) => {
-    const nextTheme = checked ? "dark" : "light";
-    localStorage.setItem("theme", nextTheme);
-    document.documentElement.classList.toggle("dark", nextTheme === "dark");
-    setIsDark(checked);
+  const switchTheme = (checked: boolean): void => {
+    const nextTheme = checked ? THEMES.DARK : THEMES.LIGHT;
+
+    document.documentElement.classList.toggle(
+      THEMES.DARK,
+      nextTheme === THEMES.DARK
+    );
+
+    toggleTheme(nextTheme);
   };
 
   useEffect(() => {
-    const stored = localStorage.getItem("theme");
+    const storedTheme = getTheme();
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
 
-    if (stored === "dark" || (!stored && prefersDark)) {
-      document.documentElement.classList.add("dark");
-      setIsDark(true);
+    if (storedTheme === THEMES.DARK || (!storedTheme && prefersDark)) {
+      document.documentElement.classList.add(THEMES.DARK);
+      toggleTheme(THEMES.DARK);
     }
   }, []);
 
-  return { isDark, toggleTheme };
+  return { isDarkTheme: theme === THEMES.DARK, switchTheme };
 };
