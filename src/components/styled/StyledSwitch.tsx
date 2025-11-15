@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
 import { Switch as SwitchShadCN } from "@/components/ui/switch";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib";
 
 type SwitchProps = ComponentProps<typeof SwitchShadCN>;
 
