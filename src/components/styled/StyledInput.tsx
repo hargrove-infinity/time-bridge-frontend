@@ -9,7 +9,7 @@ export const Input = ({ className, ...props }: InputProps) => (
     className={cn(
       "bg-input-background",
       "dark:bg-input-background",
-      "border-input-border ",
+      "border-input-border",
       "text-input-text",
       "placeholder:text-input-text-placeholder",
       "aria-invalid:border-input-error-border",

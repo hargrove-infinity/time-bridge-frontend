@@ -1,0 +1,168 @@
+:root {
+  /* Sonner Success (Green) */
+  --sonner-success-border-light: var(--sonner-green-border);
+  --sonner-success-border-dark: var(--sonner-green-border);
+  --sonner-success-border: var(--sonner-success-border-light);
+
+  --sonner-success-background-light: var(--sonner-green-background);
+  --sonner-success-background-dark: var(--sonner-green-background);
+  --sonner-success-background: var(--sonner-success-background-light);
+
+  --sonner-success-title-light: var(--sonner-green-title);
+  --sonner-success-title-dark: var(--sonner-green-title);
+  --sonner-success-title: var(--sonner-success-title-light);
+
+  --sonner-success-text-light: var(--sonner-green-text);
+  --sonner-success-text-dark: var(--sonner-green-text);
+  --sonner-success-text: var(--sonner-success-text-light);
+
+  --sonner-success-icon-light: var(--sonner-green-icon);
+  --sonner-success-icon-dark: var(--sonner-green-icon);
+  --sonner-success-icon: var(--sonner-success-icon-light);
+
+  --sonner-success-button-text-light: var(--sonner-green-title);
+  --sonner-success-button-text-dark: var(--sonner-green-title);
+  --sonner-success-button-text: var(--sonner-success-button-text-light);
+
+  /* Sonner Info (Blue) */
+  --sonner-info-border-light: var(--sonner-blue-border);
+  --sonner-info-border-dark: var(--sonner-blue-border);
+  --sonner-info-border: var(--sonner-info-border-light);
+
+  --sonner-info-background-light: var(--sonner-blue-background);
+  --sonner-info-background-dark: var(--sonner-blue-background);
+  --sonner-info-background: var(--sonner-info-background-light);
+
+  --sonner-info-title-light: var(--sonner-blue-title);
+  --sonner-info-title-dark: var(--sonner-blue-title);
+  --sonner-info-title: var(--sonner-info-title-light);
+
+  --sonner-info-text-light: var(--sonner-blue-text);
+  --sonner-info-text-dark: var(--sonner-blue-text);
+  --sonner-info-text: var(--sonner-info-text-light);
+
+  --sonner-info-icon-light: var(--sonner-blue-icon);
+  --sonner-info-icon-dark: var(--sonner-blue-icon);
+  --sonner-info-icon: var(--sonner-info-icon-light);
+
+  --sonner-info-button-text-light: var(--sonner-blue-title);
+  --sonner-info-button-text-dark: var(--sonner-blue-title);
+  --sonner-info-button-text: var(--sonner-info-button-text-light);
+
+  /* Sonner Warning (Yellow) */
+  --sonner-warning-border-light: var(--sonner-yellow-border);
+  --sonner-warning-border-dark: var(--sonner-yellow-border);
+  --sonner-warning-border: var(--sonner-warning-border-light);
+
+  --sonner-warning-background-light: var(--sonner-yellow-background);
+  --sonner-warning-background-dark: var(--sonner-yellow-background);
+  --sonner-warning-background: var(--sonner-warning-background-light);
+
+  --sonner-warning-title-light: var(--sonner-yellow-title);
+  --sonner-warning-title-dark: var(--sonner-yellow-title);
+  --sonner-warning-title: var(--sonner-warning-title-light);
+
+  --sonner-warning-text-light: var(--sonner-yellow-text);
+  --sonner-warning-text-dark: var(--sonner-yellow-text);
+  --sonner-warning-text: var(--sonner-warning-text-light);
+
+  --sonner-warning-icon-light: var(--sonner-yellow-icon);
+  --sonner-warning-icon-dark: var(--sonner-yellow-icon);
+  --sonner-warning-icon: var(--sonner-warning-icon-light);
+
+  --sonner-warning-button-text-light: var(--sonner-yellow-title);
+  --sonner-warning-button-text-dark: var(--sonner-yellow-title);
+  --sonner-warning-button-text: var(--sonner-warning-button-text-light);
+
+  /* Sonner Error (Red) */
+  --sonner-error-border-light: var(--sonner-red-border);
+  --sonner-error-border-dark: var(--sonner-red-border);
+  --sonner-error-border: var(--sonner-error-border-light);
+
+  --sonner-error-background-light: var(--sonner-red-background);
+  --sonner-error-background-dark: var(--sonner-red-background);
+  --sonner-error-background: var(--sonner-error-background-light);
+
+  --sonner-error-title-light: var(--sonner-red-title);
+  --sonner-error-title-dark: var(--sonner-red-title);
+  --sonner-error-title: var(--sonner-error-title-light);
+
+  --sonner-error-text-light: var(--sonner-red-text);
+  --sonner-error-text-dark: var(--sonner-red-text);
+  --sonner-error-text: var(--sonner-error-text-light);
+
+  --sonner-error-icon-light: var(--sonner-red-icon);
+  --sonner-error-icon-dark: var(--sonner-red-icon);
+  --sonner-error-icon: var(--sonner-error-icon-light);
+
+  --sonner-error-button-text-light: var(--sonner-red-title);
+  --sonner-error-button-text-dark: var(--sonner-red-title);
+  --sonner-error-button-text: var(--sonner-error-button-text-light);
+
+  /* Sonner Default (White) */
+  --sonner-default-border-light: var(--sonner-white-border);
+  --sonner-default-border-dark: var(--sonner-white-border);
+  --sonner-default-border: var(--sonner-default-border-light);
+
+  --sonner-default-background-light: var(--white);
+  --sonner-default-background-dark: var(--white);
+  --sonner-default-background: var(--sonner-default-background-light);
+
+  --sonner-default-title-light: var(--sonner-white-title);
+  --sonner-default-title-dark: var(--sonner-white-title);
+  --sonner-default-title: var(--sonner-default-title-light);
+
+  --sonner-default-text-light: var(--sonner-white-text);
+  --sonner-default-text-dark: var(--sonner-white-text);
+  --sonner-default-text: var(--sonner-default-text-light);
+
+  --sonner-default-icon-light: var(--sonner-white-icon);
+  --sonner-default-icon-dark: var(--sonner-white-icon);
+  --sonner-default-icon: var(--sonner-default-icon-light);
+
+  --sonner-default-button-text-light: var(--sonner-white-title);
+  --sonner-default-button-text-dark: var(--sonner-white-title);
+  --sonner-default-button-text: var(--sonner-default-button-text-light);
+}
+
+.dark {
+  /* Sonner Success */
+  --sonner-success-border: var(--sonner-success-border-dark);
+  --sonner-success-background: var(--sonner-success-background-dark);
+  --sonner-success-title: var(--sonner-success-title-dark);
+  --sonner-success-text: var(--sonner-success-text-dark);
+  --sonner-success-icon: var(--sonner-success-icon-dark);
+  --sonner-success-button-text: var(--sonner-success-button-text-dark);
+
+  /* Sonner Info */
+  --sonner-info-border: var(--sonner-info-border-dark);
+  --sonner-info-background: var(--sonner-info-background-dark);
+  --sonner-info-title: var(--sonner-info-title-dark);
+  --sonner-info-text: var(--sonner-info-text-dark);
+  --sonner-info-icon: var(--sonner-info-icon-dark);
+  --sonner-info-button-text: var(--sonner-info-button-text-dark);
+
+  /* Sonner Warning */
+  --sonner-warning-border: var(--sonner-warning-border-dark);
+  --sonner-warning-background: var(--sonner-warning-background-dark);
+  --sonner-warning-title: var(--sonner-warning-title-dark);
+  --sonner-warning-text: var(--sonner-warning-text-dark);
+  --sonner-warning-icon: var(--sonner-warning-icon-dark);
+  --sonner-warning-button-text: var(--sonner-warning-button-text-dark);
+
+  /* Sonner Error */
+  --sonner-error-border: var(--sonner-error-border-dark);
+  --sonner-error-background: var(--sonner-error-background-dark);
+  --sonner-error-title: var(--sonner-error-title-dark);
+  --sonner-error-text: var(--sonner-error-text-dark);
+  --sonner-error-icon: var(--sonner-error-icon-dark);
+  --sonner-error-button-text: var(--sonner-error-button-text-dark);
+
+  /* Sonner Default */
+  --sonner-default-border: var(--sonner-default-border-dark);
+  --sonner-default-background: var(--sonner-default-background-dark);
+  --sonner-default-title: var(--sonner-default-title-dark);
+  --sonner-default-text: var(--sonner-default-text-dark);
+  --sonner-default-icon: var(--sonner-default-icon-dark);
+  --sonner-default-button-text: var(--sonner-default-button-text-dark);
+}
