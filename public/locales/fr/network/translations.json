@@ -1,7 +1,8 @@
 {
-  "EMAIL_UNDEFINED": "Le champ e-mail n'a pas été envoyé",
-  "EMAIL_EMPTY": "Le champ e-mail est vide",
-  "EMAIL_INVALID": "L'adresse e-mail {{0}} a un format incorrect",
-  "PASSWORD_UNDEFINED": "Le champ mot de passe n'a pas été envoyé",
-  "PASSWORD_LENGTH": "Le mot de passe {{0}} comporte moins de 6 caractères."
+  "EMAIL_UNDEFINED": "Le champ e-mail n'a pas été envoyé.",
+  "EMAIL_EMPTY": "Le champ e-mail est vide.",
+  "EMAIL_INVALID": "L'adresse e-mail {{0}} a un format incorrect.",
+  "PASSWORD_UNDEFINED": "Le champ mot de passe n'a pas été envoyé.",
+  "PASSWORD_LENGTH": "Le mot de passe {{0}} comporte moins de 6 caractères.",
+  "DEFAULT_NETWORK_ERROR": "Quelque chose s'est mal passé."
 }

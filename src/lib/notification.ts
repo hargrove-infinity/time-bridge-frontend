@@ -14,14 +14,14 @@ function formatErrorData(arr: string[]) {
 export function displayNotification(error: AppErrorItem[]) {
   const notifications = error.map((errItm) => {
     const dynamicData = formatErrorData(errItm.data);
+    const translationKey = `${NETWORK_TRANSLATIONS_NAMESPACE}:${errItm.code}`;
+    const exists = i18n.exists(translationKey);
 
-    return {
-      id: uuidv4(),
-      title: i18n.t(
-        `${NETWORK_TRANSLATIONS_NAMESPACE}:${errItm.code}`,
-        dynamicData
-      ),
-    };
+    const title = exists
+      ? i18n.t(translationKey, dynamicData)
+      : i18n.t(`${NETWORK_TRANSLATIONS_NAMESPACE}:DEFAULT_NETWORK_ERROR`);
+
+    return { id: uuidv4(), title };
   });
 
   notifications.forEach((notification) =>
