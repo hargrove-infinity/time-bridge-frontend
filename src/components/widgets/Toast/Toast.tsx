@@ -36,6 +36,7 @@ export const Toast: FC<ToastProps> = ({
         {title && (
           <p
             className={cn(
+              "mr-8",
               "font-montserrat",
               "font-semibold",
               "text-base",
