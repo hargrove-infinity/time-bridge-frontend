@@ -12,7 +12,7 @@ import { getToken, setToken } from "@/lib";
 import type { AppErrorItem } from "./types";
 
 export interface AuthSlice {
-  error: AppErrorItem[] | null;
+  errors: AppErrorItem[] | null;
   loadingRegister: boolean;
   loadingLogin: boolean;
   isAuthenticated: boolean;
@@ -21,7 +21,7 @@ export interface AuthSlice {
 }
 
 export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
-  error: null,
+  errors: null,
   loadingRegister: false,
   loadingLogin: false,
   isAuthenticated: !!getToken(),
@@ -37,15 +37,15 @@ export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
 
       if (isAxiosError(error)) {
         if (isApiError(error)) {
-          set({ error: error.response.data.errors });
+          set({ errors: error.response.data.errors });
           return;
         }
 
-        set({ error: UNKNOWN_AXIOS_ERROR });
+        set({ errors: UNKNOWN_AXIOS_ERROR });
         return;
       }
 
-      set({ error: UNKNOWN_ERROR });
+      set({ errors: UNKNOWN_ERROR });
     }
   },
   login: async (body: AuthCredentials) => {
@@ -60,15 +60,15 @@ export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
 
       if (isAxiosError(error)) {
         if (isApiError(error)) {
-          set({ error: error.response.data.errors });
+          set({ errors: error.response.data.errors });
           return;
         }
 
-        set({ error: UNKNOWN_AXIOS_ERROR });
+        set({ errors: UNKNOWN_AXIOS_ERROR });
         return;
       }
 
-      set({ error: UNKNOWN_ERROR });
+      set({ errors: UNKNOWN_ERROR });
     }
   },
 });

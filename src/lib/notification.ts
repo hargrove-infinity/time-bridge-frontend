@@ -11,8 +11,8 @@ function formatErrorData(arr: string[]) {
   }, {});
 }
 
-export function displayNotification(error: AppErrorItem[]) {
-  const notifications = error.map((errItm) => {
+export function displayNotification(errors: AppErrorItem[]) {
+  const notifications = errors.map((errItm) => {
     const dynamicData = formatErrorData(errItm.data);
     const translationKey = `${NETWORK_TRANSLATIONS_NAMESPACE}:${errItm.code}`;
     const exists = i18n.exists(translationKey);

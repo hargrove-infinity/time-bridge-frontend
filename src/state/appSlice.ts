@@ -5,7 +5,7 @@ import type { AppErrorItem } from "./types";
 import i18n from "../i18n";
 
 export interface AppSlice {
-  error: AppErrorItem[] | null;
+  errors: AppErrorItem[] | null;
   language: string;
   theme: string;
   toggleLanguage: (language: string) => void;
@@ -13,13 +13,13 @@ export interface AppSlice {
 }
 
 export const createAppSlice: StateCreator<AppSlice> = (set) => ({
-  error: null,
+  errors: null,
   language: getLanguage(),
   theme: getTheme(),
   toggleLanguage: (language: string) => {
     i18n.changeLanguage(language, (error) => {
       if (error) {
-        set({ error: CHANGE_LANGUAGE_ERROR });
+        set({ errors: CHANGE_LANGUAGE_ERROR });
         return;
       }
 
