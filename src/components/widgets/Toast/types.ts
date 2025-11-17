@@ -15,7 +15,7 @@ export interface ToastProps {
 
 export interface NotifyArgs {
   actions?: { btnText: string; cb: () => void }[];
-  description: string;
+  description?: string;
   duration?: number;
   id: string;
   title: string;
