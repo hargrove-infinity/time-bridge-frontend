@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { toast } from "sonner";
 import { X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib";
 import type { ToastProps } from "./types";
 import { toastPaletteMap, variantsWithIcon } from "./statics";
 import { defineIcon } from "./helpers";
