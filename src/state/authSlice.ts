@@ -8,7 +8,8 @@ import {
   UNKNOWN_AXIOS_ERROR,
   UNKNOWN_ERROR,
 } from "@/api";
-import { getToken, setToken } from "@/lib";
+import { LOCAL_ERRORS_COMMON_NAMESPACE } from "@/constants";
+import { displayNotification, getToken, setToken } from "@/lib";
 import type { AppErrorItem } from "./types";
 
 export interface AuthSlice {
@@ -38,14 +39,23 @@ export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
       if (isAxiosError(error)) {
         if (isApiError(error)) {
           set({ errors: error.response.data.errors });
+          displayNotification({ errors: error.response.data.errors });
           return;
         }
 
         set({ errors: UNKNOWN_AXIOS_ERROR });
+        displayNotification({
+          errors: UNKNOWN_AXIOS_ERROR,
+          ns: LOCAL_ERRORS_COMMON_NAMESPACE,
+        });
         return;
       }
 
       set({ errors: UNKNOWN_ERROR });
+      displayNotification({
+        errors: UNKNOWN_ERROR,
+        ns: LOCAL_ERRORS_COMMON_NAMESPACE,
+      });
     }
   },
   login: async (body: AuthCredentials) => {
@@ -61,14 +71,23 @@ export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
       if (isAxiosError(error)) {
         if (isApiError(error)) {
           set({ errors: error.response.data.errors });
+          displayNotification({ errors: error.response.data.errors });
           return;
         }
 
         set({ errors: UNKNOWN_AXIOS_ERROR });
+        displayNotification({
+          errors: UNKNOWN_AXIOS_ERROR,
+          ns: LOCAL_ERRORS_COMMON_NAMESPACE,
+        });
         return;
       }
 
       set({ errors: UNKNOWN_ERROR });
+      displayNotification({
+        errors: UNKNOWN_ERROR,
+        ns: LOCAL_ERRORS_COMMON_NAMESPACE,
+      });
     }
   },
 });

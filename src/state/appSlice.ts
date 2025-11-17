@@ -1,8 +1,17 @@
 import type { StateCreator } from "zustand";
-import { CHANGE_LANGUAGE_ERROR } from "@/constants";
-import { getLanguage, getTheme, setLanguage, setTheme } from "@/lib";
-import type { AppErrorItem } from "./types";
+import {
+  CHANGE_LANGUAGE_ERROR,
+  LOCAL_ERRORS_COMMON_NAMESPACE,
+} from "@/constants";
+import {
+  displayNotification,
+  getLanguage,
+  getTheme,
+  setLanguage,
+  setTheme,
+} from "@/lib";
 import i18n from "../i18n";
+import type { AppErrorItem } from "./types";
 
 export interface AppSlice {
   errors: AppErrorItem[] | null;
@@ -20,6 +29,10 @@ export const createAppSlice: StateCreator<AppSlice> = (set) => ({
     i18n.changeLanguage(language, (error) => {
       if (error) {
         set({ errors: CHANGE_LANGUAGE_ERROR });
+        displayNotification({
+          errors: CHANGE_LANGUAGE_ERROR,
+          ns: LOCAL_ERRORS_COMMON_NAMESPACE,
+        });
         return;
       }
 

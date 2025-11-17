@@ -4,6 +4,11 @@ import { NETWORK_TRANSLATIONS_NAMESPACE } from "@/constants";
 import i18n from "@/i18n";
 import type { AppErrorItem } from "@/state";
 
+interface DisplayNotificationArgs {
+  errors: AppErrorItem[];
+  ns?: string;
+}
+
 function formatErrorData(arr: string[]) {
   return arr.reduce((acc: Record<string, string>, itm, idx) => {
     acc[idx] = itm;
@@ -11,15 +16,17 @@ function formatErrorData(arr: string[]) {
   }, {});
 }
 
-export function displayNotification(errors: AppErrorItem[]) {
+export function displayNotification(args: DisplayNotificationArgs) {
+  const { errors, ns = NETWORK_TRANSLATIONS_NAMESPACE } = args;
+
   const notifications = errors.map((errItm) => {
     const dynamicData = formatErrorData(errItm.data);
-    const translationKey = `${NETWORK_TRANSLATIONS_NAMESPACE}:${errItm.code}`;
+    const translationKey = `${ns}:${errItm.code}`;
     const exists = i18n.exists(translationKey);
 
     const title = exists
       ? i18n.t(translationKey, dynamicData)
-      : i18n.t(`${NETWORK_TRANSLATIONS_NAMESPACE}:DEFAULT_NETWORK_ERROR`);
+      : i18n.t(`${ns}:DEFAULT_NETWORK_ERROR`);
 
     return { id: uuidv4(), title };
   });
