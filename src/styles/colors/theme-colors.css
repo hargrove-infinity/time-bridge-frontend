@@ -112,6 +112,48 @@
   --color-switch-icon: var(--switch-icon);
   --color-switch-title: var(--switch-title);
   --color-switch-label: var(--switch-label);
+
+  /* Sonner */
+
+  /* Sonner Success */
+  --color-sonner-success-border: var(--sonner-success-border);
+  --color-sonner-success-background: var(--sonner-success-background);
+  --color-sonner-success-title: var(--sonner-success-title);
+  --color-sonner-success-text: var(--sonner-success-text);
+  --color-sonner-success-icon: var(--sonner-success-icon);
+  --color-sonner-success-button-text: var(--sonner-success-button-text);
+
+  /* Sonner Info */
+  --color-sonner-info-border: var(--sonner-info-border);
+  --color-sonner-info-background: var(--sonner-info-background);
+  --color-sonner-info-title: var(--sonner-info-title);
+  --color-sonner-info-text: var(--sonner-info-text);
+  --color-sonner-info-icon: var(--sonner-info-icon);
+  --color-sonner-info-button-text: var(--sonner-info-button-text);
+
+  /* Sonner Warning */
+  --color-sonner-warning-border: var(--sonner-warning-border);
+  --color-sonner-warning-background: var(--sonner-warning-background);
+  --color-sonner-warning-title: var(--sonner-warning-title);
+  --color-sonner-warning-text: var(--sonner-warning-text);
+  --color-sonner-warning-icon: var(--sonner-warning-icon);
+  --color-sonner-warning-button-text: var(--sonner-warning-button-text);
+
+  /* Sonner Error */
+  --color-sonner-error-border: var(--sonner-error-border);
+  --color-sonner-error-background: var(--sonner-error-background);
+  --color-sonner-error-title: var(--sonner-error-title);
+  --color-sonner-error-text: var(--sonner-error-text);
+  --color-sonner-error-icon: var(--sonner-error-icon);
+  --color-sonner-error-button-text: var(--sonner-error-button-text);
+
+  /* Sonner Default */
+  --color-sonner-default-border: var(--sonner-default-border);
+  --color-sonner-default-background: var(--sonner-default-background);
+  --color-sonner-default-title: var(--sonner-default-title);
+  --color-sonner-default-text: var(--sonner-default-text);
+  --color-sonner-default-icon: var(--sonner-default-icon);
+  --color-sonner-default-button-text: var(--sonner-default-button-text);
 }
 
 /* Shadcn base values */

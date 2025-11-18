@@ -22,4 +22,46 @@
   --red-800: #b10008;
   --red-700: #d8000a;
   --red-600: #ed2a33;
+
+  /* Sonner palette colors */
+
+  /* Success - green */
+  --sonner-green-border: #a7f3d0;
+  --sonner-green-background: #ecfdf5;
+  --sonner-green-title: #065f46;
+  --sonner-green-text: #047857;
+  --sonner-green-icon: #10b981;
+  --sonner-green-button-text: #065f46;
+
+  /* Info - blue */
+  --sonner-blue-border: #b1cdfb;
+  --sonner-blue-background: #f3f7ff;
+  --sonner-blue-title: #183462;
+  --sonner-blue-text: #234e94;
+  --sonner-blue-icon: #3b82f6;
+  --sonner-blue-button-text: #183462;
+
+  /* Warning - yellow */
+  --sonner-yellow-border: #fde68a;
+  --sonner-yellow-background: #fffbeb;
+  --sonner-yellow-title: #92400e;
+  --sonner-yellow-text: #b45309;
+  --sonner-yellow-icon: #f59e0b;
+  --sonner-yellow-button-text: #92400e;
+
+  /* Error - red */
+  --sonner-red-border: #fecaca;
+  --sonner-red-background: #fef2f2;
+  --sonner-red-title: #991b1b;
+  --sonner-red-text: #b91c1c;
+  --sonner-red-icon: #ef4444;
+  --sonner-red-button-text: #991b1b;
+
+  /* Default - white */
+  --sonner-white-border: #ebeef0;
+  --sonner-white-background: #ffffff;
+  --sonner-white-title: #1d2328;
+  --sonner-white-text: #5f7282;
+  --sonner-white-icon: #718799;
+  --sonner-white-button-text: #1d2328;
 }

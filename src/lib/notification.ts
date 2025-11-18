@@ -1,0 +1,41 @@
+import { v4 as uuidv4 } from "uuid";
+import { notify } from "@/components";
+import { NETWORK_TRANSLATIONS_NAMESPACE } from "@/constants";
+import i18n from "@/i18n";
+import type { AppErrorItem } from "@/state";
+
+interface DisplayNotificationArgs {
+  errors: AppErrorItem[];
+  ns?: string;
+}
+
+function formatErrorData(arr: string[]) {
+  return arr.reduce((acc: Record<string, string>, itm, idx) => {
+    acc[idx] = itm;
+    return acc;
+  }, {});
+}
+
+export function displayNotification(args: DisplayNotificationArgs) {
+  const { errors, ns = NETWORK_TRANSLATIONS_NAMESPACE } = args;
+
+  const notifications = errors.map((errItm) => {
+    const dynamicData = formatErrorData(errItm.data);
+    const translationKey = `${ns}:${errItm.code}`;
+    const exists = i18n.exists(translationKey);
+
+    const title = exists
+      ? i18n.t(translationKey, dynamicData)
+      : i18n.t(`${ns}:DEFAULT_NETWORK_ERROR`);
+
+    return { id: uuidv4(), title };
+  });
+
+  notifications.forEach((notification) =>
+    notify({
+      id: notification.id,
+      title: notification.title,
+      variant: "error",
+    })
+  );
+}

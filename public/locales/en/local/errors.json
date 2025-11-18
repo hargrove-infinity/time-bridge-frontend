@@ -1,4 +1,9 @@
 {
+  "common": {
+    "UNKNOWN_ERROR": "Unknown error",
+    "UNKNOWN_AXIOS_ERROR": "Unknown axios error",
+    "CHANGE_LANGUAGE_ERROR": "Error i18n while changing language"
+  },
   "auth": {
     "INCORRECT_EMAIL": "Incorrect email",
     "PASSWORD_LENGTH": "Password must be at least 8 characters",
