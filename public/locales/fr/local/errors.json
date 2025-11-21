@@ -5,8 +5,9 @@
     "CHANGE_LANGUAGE_ERROR": "Erreur i18n lors du changement de langue"
   },
   "auth": {
-    "INCORRECT_EMAIL": "Adresse e-mail incorrecte",
-    "PASSWORD_LENGTH": "Le mot de passe doit comporter au moins 8 caractères",
-    "PASSWORD_PATTERN": "Le mot de passe doit contenir au moins une lettre minuscule, une lettre majuscule et un chiffre"
+    "EMAIL_INCORRECT_PATTERN": "Adresse e-mail incorrecte",
+    "PASSWORD_NOT_STRING": "Le mot de passe doit être une chaîne de caractères valide",
+    "PASSWORD_MIN_LEN_FAILED": "Le mot de passe doit comporter au moins 8 caractères",
+    "PASSWORD_REQUIREMENTS_NOT_MET": "Le mot de passe doit contenir au moins une lettre minuscule, une lettre majuscule et un chiffre"
   }
 }

@@ -5,8 +5,9 @@
     "CHANGE_LANGUAGE_ERROR": "Error i18n while changing language"
   },
   "auth": {
-    "INCORRECT_EMAIL": "Incorrect email",
-    "PASSWORD_LENGTH": "Password must be at least 8 characters",
-    "PASSWORD_PATTERN": "Password must contain at least one lowercase letter, one uppercase letter, and one number"
+    "EMAIL_INCORRECT_PATTERN": "Email is incorrect",
+    "PASSWORD_NOT_STRING": "Password must be a valid string",
+    "PASSWORD_MIN_LEN_FAILED": "Password must be at least 8 characters",
+    "PASSWORD_REQUIREMENTS_NOT_MET": "Password must contain at least one lowercase letter, one uppercase letter, and one number"
   }
 }
