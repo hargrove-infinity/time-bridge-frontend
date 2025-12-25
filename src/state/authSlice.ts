@@ -15,6 +15,7 @@ import type { AppErrorItem } from "./types";
 export interface AuthSlice {
   errors: AppErrorItem[] | null;
   loadingRegister: boolean;
+  loadingEmailConfirm: boolean;
   loadingLogin: boolean;
   isAuthenticated: boolean;
   nextStep: string | null;
@@ -25,6 +26,7 @@ export interface AuthSlice {
 export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
   errors: null,
   loadingRegister: false,
+  loadingEmailConfirm: false,
   loadingLogin: false,
   isAuthenticated: !!getToken(),
   nextStep: null,

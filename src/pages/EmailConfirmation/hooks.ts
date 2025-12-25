@@ -2,8 +2,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import z from "zod";
 import { otpCodeSchema } from "@/validation";
+import { useStore } from "@/state";
 
 export const useEmailConfirmation = () => {
+  const { loadingEmailConfirm } = useStore();
+
   const form = useForm<z.infer<typeof otpCodeSchema>>({
     resolver: zodResolver(otpCodeSchema),
     defaultValues: { code: "" },
@@ -15,7 +18,7 @@ export const useEmailConfirmation = () => {
 
   return {
     form,
-    loadingEmailConfirm: false,
+    loadingEmailConfirm,
     handleSubmit,
   };
 };
