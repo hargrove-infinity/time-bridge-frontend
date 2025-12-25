@@ -64,6 +64,15 @@
   --color-input-error-border: var(--input-error-border);
   --color-input-error-ring: var(--input-error-ring);
 
+  /* Input OTP */
+  --color-input-otp-background: var(--input-otp-background);
+  --color-input-otp-text: var(--input-otp-text);
+  --color-input-otp-border: var(--input-otp-border);
+  --color-input-otp-border-focus: var(--input-otp-border-focus);
+  --color-input-otp-ring: var(--input-otp-ring);
+  --color-input-otp-caret: var(--input-otp-caret);
+  --color-input-otp-separator: var(--input-otp-separator);
+
   /* FieldLabel */
   --color-field-label-text: var(--field-label-text);
   --color-field-label-text-error: var(--field-label-text-error);
