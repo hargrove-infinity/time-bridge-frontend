@@ -1,0 +1,3 @@
+export const AUTH_STEPS = {
+  EMAIL_CONFIRMATION: "EMAIL_CONFIRMATION",
+};

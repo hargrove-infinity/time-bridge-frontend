@@ -17,6 +17,7 @@ export interface AuthSlice {
   loadingRegister: boolean;
   loadingLogin: boolean;
   isAuthenticated: boolean;
+  nextStep: string | null;
   register: (args: AuthCredentials) => Promise<void>;
   login: (args: AuthCredentials) => Promise<void>;
 }
@@ -26,13 +27,13 @@ export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
   loadingRegister: false,
   loadingLogin: false,
   isAuthenticated: !!getToken(),
+  nextStep: null,
   register: async (body: AuthCredentials) => {
     try {
       set({ loadingRegister: true });
       const res = await registerRequest(body);
       const { payload } = res.data;
-      setToken(payload);
-      set({ loadingRegister: false, isAuthenticated: true });
+      set({ loadingRegister: false, nextStep: payload.nextStep });
     } catch (error) {
       set({ loadingRegister: false });
 

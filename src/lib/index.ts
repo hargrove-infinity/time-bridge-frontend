@@ -1,3 +1,4 @@
+export * from "./getNextPath";
 export * from "./language";
 export * from "./notification";
 export * from "./theme";
