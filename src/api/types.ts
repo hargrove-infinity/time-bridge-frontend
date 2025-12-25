@@ -25,3 +25,8 @@ export interface AuthCredentials {
 export interface RegisterRequestPayload {
   nextStep: string;
 }
+
+export interface EmailConfirmRequestArgs {
+  email: string;
+  code: string;
+}
