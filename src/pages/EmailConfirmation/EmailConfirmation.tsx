@@ -1,10 +1,11 @@
+import { REGEXP_ONLY_DIGITS } from "input-otp";
 import { Frame, InputOTP, InputOTPGroup, InputOTPSlot } from "@/components";
 
 export const EmailConfirmation = () => {
   return (
     <Frame>
       EmailConfirmation
-      <InputOTP maxLength={6}>
+      <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS}>
         <InputOTPGroup>
           <InputOTPSlot index={0} />
           <InputOTPSlot index={1} />
