@@ -13,3 +13,11 @@ export const UNKNOWN_AXIOS_ERROR = [
     data: [],
   },
 ];
+
+export const EMAIL_FOR_CONFIRMATION_MISSING = [
+  {
+    code: "EMAIL_FOR_CONFIRMATION_MISSING",
+    description: "Email for confirmation is missing",
+    data: [],
+  },
+];
