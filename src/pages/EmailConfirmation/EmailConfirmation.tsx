@@ -18,7 +18,12 @@ export const EmailConfirmation = () => {
 
   return (
     <Frame>
-      EmailConfirmation
+      <h3 className="mb-2 text-title-color font-semibold text-2xl">
+        {hook.locale.title}
+      </h3>
+      <h4 className="mb-8 text-subtitle-color font-semibold text-base">
+        {hook.locale.subTitle}
+      </h4>
       <form onSubmit={hook.form.handleSubmit(hook.handleSubmit)}>
         <FieldGroup className="gap-3">
           <Controller
@@ -27,7 +32,7 @@ export const EmailConfirmation = () => {
             render={({ field, fieldState }) => (
               <Field data-invalid={fieldState.invalid} className="mb-3 gap-1">
                 <FieldLabel htmlFor="email">
-                  'hook.locale.emailLabel'
+                  {hook.locale.inputOtpCodeLabel}
                 </FieldLabel>
                 <InputOTP
                   {...field}
@@ -54,7 +59,7 @@ export const EmailConfirmation = () => {
           />
         </FieldGroup>
         <Button type="submit" className="mt-8">
-          'hook.locale.registerBtn'
+          {hook.locale.confirmBtn}
         </Button>
       </form>
     </Frame>

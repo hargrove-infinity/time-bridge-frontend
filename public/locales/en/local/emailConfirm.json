@@ -1,0 +1,12 @@
+{
+  "heading": {
+    "title": "Email verification",
+    "subTitle": "Please enter the 6-digit verification code sent to your email. It expires in 30 minutes."
+  },
+  "form": {
+    "inputOtpCodeLabel": "Verification code"
+  },
+  "buttons": {
+    "confirmBtn": "Confirm"
+  }
+}

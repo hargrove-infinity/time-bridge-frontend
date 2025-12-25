@@ -1,0 +1,12 @@
+{
+  "heading": {
+    "title": "Vérification de l'email",
+    "subTitle": "Veuillez saisir le code de vérification à 6 chiffres envoyé à votre adresse e-mail. Il expire dans 30 minutes."
+  },
+  "form": {
+    "inputOtpCodeLabel": "Le code de vérification"
+  },
+  "buttons": {
+    "confirmBtn": "Confirmer"
+  }
+}
