@@ -8,15 +8,15 @@ import { useStore } from "@/state";
 
 export const useEmailConfirmation = () => {
   const { t } = useTranslation(LOCAL_EMAIL_CONFIRM_NAMESPACE);
-  const { loadingEmailConfirm } = useStore();
+  const { loadingEmailConfirm, emailConfirm } = useStore();
 
   const form = useForm<z.infer<typeof otpCodeSchema>>({
     resolver: zodResolver(otpCodeSchema),
     defaultValues: { code: "" },
   });
 
-  const handleSubmit = (data: z.infer<typeof otpCodeSchema>): void => {
-    console.log("data: ", data);
+  const handleSubmit = ({ code }: z.infer<typeof otpCodeSchema>): void => {
+    emailConfirm(code);
   };
 
   return {
