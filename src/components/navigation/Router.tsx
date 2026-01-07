@@ -1,7 +1,20 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { ANALYTICS, DASHBOARD, HOME, LOGIN, REGISTER } from "@/constants";
+import {
+  ANALYTICS,
+  DASHBOARD,
+  EMAIL_CONFIRMATION,
+  HOME,
+  LOGIN,
+  REGISTER,
+} from "@/constants";
 import { useStore } from "@/state";
-import { Analytics, Dashboard, Login, Register } from "@/pages";
+import {
+  Analytics,
+  Dashboard,
+  EmailConfirmation,
+  Login,
+  Register,
+} from "@/pages";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 
@@ -20,6 +33,7 @@ export const Router = () => {
         <Route element={<PublicRoute />}>
           <Route path={LOGIN} element={<Login />} />
           <Route path={REGISTER} element={<Register />} />
+          <Route path={EMAIL_CONFIRMATION} element={<EmailConfirmation />} />
         </Route>
         <Route element={<PrivateRoute />}>
           <Route path={ANALYTICS} element={<Analytics />} />

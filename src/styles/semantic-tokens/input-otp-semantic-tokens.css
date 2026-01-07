@@ -1,0 +1,41 @@
+:root {
+  /* Input OTP */
+  --input-otp-background-light: var(--white);
+  --input-otp-background-dark: var(--green-950);
+  --input-otp-background: var(--input-otp-background-light);
+
+  --input-otp-text-light: var(--green-950);
+  --input-otp-text-dark: var(--white);
+  --input-otp-text: var(--input-otp-text-light);
+
+  --input-otp-border-light: var(--green-300);
+  --input-otp-border-dark: var(--green-700);
+  --input-otp-border: var(--input-otp-border-light);
+
+  --input-otp-border-focus-light: var(--green-400);
+  --input-otp-border-focus-dark: var(--green-500);
+  --input-otp-border-focus: var(--input-otp-border-focus-light);
+
+  --input-otp-ring-light: var(--green-400);
+  --input-otp-ring-dark: var(--green-500);
+  --input-otp-ring: var(--input-otp-ring-light);
+
+  --input-otp-caret-light: var(--green-500);
+  --input-otp-caret-dark: var(--green-300);
+  --input-otp-caret: var(--input-otp-caret-light);
+
+  --input-otp-separator-light: var(--green-700);
+  --input-otp-separator-dark: var(--green-50);
+  --input-otp-separator: var(--input-otp-separator-light);
+}
+
+.dark {
+  /* Input OTP */
+  --input-otp-background: var(--input-otp-background-dark);
+  --input-otp-text: var(--input-otp-text-dark);
+  --input-otp-border: var(--input-otp-border-dark);
+  --input-otp-border-focus: var(--input-otp-border-focus-dark);
+  --input-otp-ring: var(--input-otp-ring-dark);
+  --input-otp-caret: var(--input-otp-caret-dark);
+  --input-otp-separator: var(--input-otp-separator-dark);
+}

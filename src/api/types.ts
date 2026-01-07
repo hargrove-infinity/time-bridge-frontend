@@ -21,3 +21,12 @@ export interface AuthCredentials {
   email: string;
   password: string;
 }
+
+export interface RegisterRequestPayload {
+  nextStep: string;
+}
+
+export interface EmailConfirmRequestArgs {
+  email: string;
+  code: string;
+}
