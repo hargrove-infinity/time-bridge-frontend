@@ -8,16 +8,11 @@ import {
   UNKNOWN_AXIOS_ERROR,
   UNKNOWN_ERROR,
   emailConfirmRequest,
-  EMAIL_FOR_CONFIRMATION_MISSING,
 } from "@/api";
-import {
-  LOCAL_ERRORS_AUTH_NAMESPACE,
-  LOCAL_ERRORS_COMMON_NAMESPACE,
-} from "@/constants";
+import { LOCAL_ERRORS_COMMON_NAMESPACE } from "@/constants";
 import {
   deleteEmail,
   displayNotification,
-  getEmail,
   getToken,
   setEmail,
   setToken,
@@ -32,7 +27,7 @@ export interface AuthSlice {
   isAuthenticated: boolean;
   nextStep: string | null;
   register: (args: AuthCredentials) => Promise<void>;
-  emailConfirm: (code: string) => Promise<void>;
+  emailConfirm: (args: { code: string; email: string }) => Promise<void>;
   login: (args: AuthCredentials) => Promise<void>;
 }
 
@@ -75,22 +70,11 @@ export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
       });
     }
   },
-  emailConfirm: async (code: string) => {
+  emailConfirm: async (args: { code: string; email: string }) => {
     try {
       set({ loadingEmailConfirm: true });
 
-      const email = getEmail();
-
-      if (!email) {
-        set({ errors: EMAIL_FOR_CONFIRMATION_MISSING });
-        displayNotification({
-          errors: EMAIL_FOR_CONFIRMATION_MISSING,
-          ns: LOCAL_ERRORS_AUTH_NAMESPACE,
-        });
-        return;
-      }
-
-      const res = await emailConfirmRequest({ email, code });
+      const res = await emailConfirmRequest(args);
       const { payload } = res.data;
 
       setToken(payload);

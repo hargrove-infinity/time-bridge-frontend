@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { LOCAL_EMAIL_CONFIRM_NAMESPACE } from "@/constants";
 import { otpCodeSchema } from "@/validation";
 import { useStore } from "@/state";
+import { getEmail } from "@/lib";
 
 export const useEmailConfirmation = () => {
   const { t } = useTranslation(LOCAL_EMAIL_CONFIRM_NAMESPACE);
@@ -16,7 +17,11 @@ export const useEmailConfirmation = () => {
   });
 
   const handleSubmit = ({ code }: z.infer<typeof otpCodeSchema>): void => {
-    emailConfirm(code);
+    const email = getEmail();
+
+    if (email) {
+      emailConfirm({ email, code });
+    }
   };
 
   return {
