@@ -1,14 +1,16 @@
 import type { StateCreator } from "zustand";
 import {
   type AuthCredentials,
-  loginRequest,
   registerRequest,
+  emailConfirmRequest,
+  resendCodeRequest,
+  loginRequest,
   isApiError,
   isAxiosError,
+  EMAIL_FOR_CONFIRMATION_MISSING,
+  EMAIL_FOR_RESEND_CODE_MISSING,
   UNKNOWN_AXIOS_ERROR,
   UNKNOWN_ERROR,
-  emailConfirmRequest,
-  EMAIL_FOR_CONFIRMATION_MISSING,
 } from "@/api";
 import {
   LOCAL_ERRORS_AUTH_NAMESPACE,
@@ -28,9 +30,11 @@ export interface AuthSlice {
   errors: AppErrorItem[] | null;
   loadingRegister: boolean;
   loadingEmailConfirm: boolean;
+  loadingResendCode: boolean;
   loadingLogin: boolean;
   isAuthenticated: boolean;
   nextStep: string | null;
+  nextResendTime: string | null;
   register: (args: AuthCredentials) => Promise<void>;
   emailConfirm: (code: string) => Promise<void>;
   login: (args: AuthCredentials) => Promise<void>;
@@ -40,9 +44,11 @@ export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
   errors: null,
   loadingRegister: false,
   loadingEmailConfirm: false,
+  loadingResendCode: false,
   loadingLogin: false,
   isAuthenticated: !!getToken(),
   nextStep: null,
+  nextResendTime: null,
   register: async (body: AuthCredentials) => {
     try {
       set({ loadingRegister: true });
@@ -99,6 +105,50 @@ export const createAuthSlice: StateCreator<AuthSlice> = (set) => ({
       set({ loadingEmailConfirm: false, isAuthenticated: true });
     } catch (error) {
       set({ loadingEmailConfirm: false });
+
+      if (isAxiosError(error)) {
+        if (isApiError(error)) {
+          set({ errors: error.response.data.errors });
+          displayNotification({ errors: error.response.data.errors });
+          return;
+        }
+
+        set({ errors: UNKNOWN_AXIOS_ERROR });
+        displayNotification({
+          errors: UNKNOWN_AXIOS_ERROR,
+          ns: LOCAL_ERRORS_COMMON_NAMESPACE,
+        });
+        return;
+      }
+
+      set({ errors: UNKNOWN_ERROR });
+      displayNotification({
+        errors: UNKNOWN_ERROR,
+        ns: LOCAL_ERRORS_COMMON_NAMESPACE,
+      });
+    }
+  },
+  resendCode: async () => {
+    try {
+      set({ loadingResendCode: true });
+
+      const email = getEmail();
+
+      if (!email) {
+        set({ errors: EMAIL_FOR_RESEND_CODE_MISSING });
+        displayNotification({
+          errors: EMAIL_FOR_RESEND_CODE_MISSING,
+          ns: LOCAL_ERRORS_AUTH_NAMESPACE,
+        });
+        return;
+      }
+
+      const res = await resendCodeRequest(email);
+      const { payload } = res.data;
+
+      set({ loadingResendCode: false, nextResendTime: payload.nextResendTime });
+    } catch (error) {
+      set({ loadingResendCode: false });
 
       if (isAxiosError(error)) {
         if (isApiError(error)) {

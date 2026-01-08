@@ -9,6 +9,7 @@
     "PASSWORD_NOT_STRING": "Password must be a valid string",
     "PASSWORD_MIN_LEN_FAILED": "Password must be at least 8 characters",
     "PASSWORD_REQUIREMENTS_NOT_MET": "Password must contain at least one lowercase letter, one uppercase letter, and one number",
-    "EMAIL_FOR_CONFIRMATION_MISSING": "Email for confirmation is missing"
+    "EMAIL_FOR_CONFIRMATION_MISSING": "Email for confirmation is missing",
+    "EMAIL_FOR_RESEND_CODE_MISSING": "Email for resend code is missing"
   }
 }
