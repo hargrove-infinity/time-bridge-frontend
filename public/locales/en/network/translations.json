@@ -4,5 +4,7 @@
   "EMAIL_INVALID": "Email {{0}} has wrong format.",
   "PASSWORD_UNDEFINED": "Password field has not been sent.",
   "PASSWORD_LENGTH": "Password {{0}} is less than 6 characters.",
+  "EMAIL_CONFIRMATION_FAILED": "Wrong code.",
+  "EMAIL_CONFIRM_RESEND_LIMIT_REACHED_BLOCKED": "You reached your limit for resend code. Your account is blocked.",
   "DEFAULT_NETWORK_ERROR": "Something went wrong."
 }
