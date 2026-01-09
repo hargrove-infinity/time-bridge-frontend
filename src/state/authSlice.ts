@@ -37,6 +37,7 @@ export interface AuthSlice {
   nextResendTime: string | null;
   register: (args: AuthCredentials) => Promise<void>;
   emailConfirm: (code: string) => Promise<void>;
+  resendCode: () => Promise<void>;
   login: (args: AuthCredentials) => Promise<void>;
 }
 
