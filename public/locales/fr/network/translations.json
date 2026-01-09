@@ -4,5 +4,7 @@
   "EMAIL_INVALID": "L'adresse e-mail {{0}} a un format incorrect.",
   "PASSWORD_UNDEFINED": "Le champ mot de passe n'a pas été envoyé.",
   "PASSWORD_LENGTH": "Le mot de passe {{0}} comporte moins de 6 caractères.",
+  "EMAIL_CONFIRMATION_FAILED": "Code incorrect.",
+  "EMAIL_CONFIRM_RESEND_LIMIT_REACHED_BLOCKED": "Vous avez atteint votre limite de renvoi de code. Votre compte est bloqué.",
   "DEFAULT_NETWORK_ERROR": "Quelque chose s'est mal passé."
 }

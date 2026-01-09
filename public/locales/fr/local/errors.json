@@ -9,6 +9,7 @@
     "PASSWORD_NOT_STRING": "Le mot de passe doit être une chaîne de caractères valide",
     "PASSWORD_MIN_LEN_FAILED": "Le mot de passe doit comporter au moins 8 caractères",
     "PASSWORD_REQUIREMENTS_NOT_MET": "Le mot de passe doit contenir au moins une lettre minuscule, une lettre majuscule et un chiffre",
-    "EMAIL_FOR_CONFIRMATION_MISSING": "L'e-mail de confirmation est manquant."
+    "EMAIL_FOR_CONFIRMATION_MISSING": "L'e-mail de confirmation est manquant.",
+    "EMAIL_FOR_RESEND_CODE_MISSING": "L'adresse e-mail pour renvoyer le code est manquante."
   }
 }

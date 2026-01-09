@@ -12,6 +12,7 @@ import {
   InputOTPSlot,
 } from "@/components";
 import { useEmailConfirmation } from "./hooks";
+import { ResendCodeBlock } from "../ResendCodeBlock";
 
 export const EmailConfirmation = () => {
   const hook = useEmailConfirmation();
@@ -58,6 +59,7 @@ export const EmailConfirmation = () => {
             )}
           />
         </FieldGroup>
+        <ResendCodeBlock />
         <Button type="submit" className="mt-8">
           {hook.locale.confirmBtn}
         </Button>

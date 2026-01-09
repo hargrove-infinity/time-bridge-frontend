@@ -86,7 +86,9 @@
     --button-eye-icon-background-hover
   );
 
-  /* Add these to your existing theme-colors.css */
+  /* Button Link */
+  --color-button-link-text: var(--button-link-text);
+  --color-button-link-text-hover: var(--button-link-text-hover);
 
   /* Select */
   --color-select-background: var(--select-background);

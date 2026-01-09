@@ -6,6 +6,11 @@
   "form": {
     "inputOtpCodeLabel": "Le code de vérification"
   },
+  "resend": {
+    "question": "Vous n'avez pas reçu le code?",
+    "resendBtnDefault": "Renvoyer",
+    "resendBtnLoading": "Envoi..."
+  },
   "buttons": {
     "confirmBtn": "Confirmer"
   }

@@ -21,3 +21,11 @@ export const EMAIL_FOR_CONFIRMATION_MISSING = [
     data: [],
   },
 ];
+
+export const EMAIL_FOR_RESEND_CODE_MISSING = [
+  {
+    code: "EMAIL_FOR_RESEND_CODE_MISSING",
+    description: "Email for resend code is missing",
+    data: [],
+  },
+];

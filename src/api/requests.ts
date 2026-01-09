@@ -19,6 +19,14 @@ export const emailConfirmRequest = (
   return api.post(AUTH_ENDPOINTS.EMAIL_CONFIRM, args);
 };
 
+export const resendCodeRequest = (
+  email: string
+): ApiPromise<{
+  nextResendTime: string;
+}> => {
+  return api.post(AUTH_ENDPOINTS.RESEND_CODE, { email });
+};
+
 export const loginRequest = (args: AuthCredentials): ApiPromise<string> => {
   return api.post(AUTH_ENDPOINTS.LOGIN, args);
 };

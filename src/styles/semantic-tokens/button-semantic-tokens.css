@@ -18,6 +18,15 @@
   --button-eye-icon-background-hover: var(
     --button-eye-icon-background-hover-light
   );
+
+  /* Button Link */
+  --button-link-text-light: var(--green-900);
+  --button-link-text-dark: var(--white);
+  --button-link-text: var(--button-link-text-light);
+
+  --button-link-text-hover-light: var(--green-300);
+  --button-link-text-hover-dark: var(--green-50);
+  --button-link-text-hover: var(--button-link-text-hover-light);
 }
 
 .dark {
@@ -30,4 +39,8 @@
   --button-eye-icon-background-hover: var(
     --button-eye-icon-background-hover-dark
   );
+
+  /* Button Link */
+  --button-link-text: var(--button-link-text-dark);
+  --button-link-text-hover: var(--button-link-text-hover-dark);
 }
